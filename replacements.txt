@@ -1,10 +1,1 @@
-pxfh wjyj nxtt foiu==>
-your-super-secret-key-with-at-least-32-characters==>
-postgres==>
-<your-twilio-account-sid>=REDACTED
-REDACTED==>
-whatsapp:+14155238886==>
-khemasai413@gmail.com
-pxfh wjyj nxtt foiu
-your-super-secret-key-with-at-least-32-characters
-REDACTED==>
+
