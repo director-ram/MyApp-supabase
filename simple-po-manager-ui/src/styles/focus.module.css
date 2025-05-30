@@ -1,0 +1,53 @@
+/* Focus styles for better accessibility */
+.focusRing {
+    outline: none;
+    position: relative;
+}
+
+.focusRing:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+/* Custom focus styles for different elements */
+.inputFocus {
+    outline: none;
+    position: relative;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputFocus:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+.buttonFocus {
+    outline: none;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buttonFocus:focus-visible {
+    transform: translateY(-1px);
+}
+
+/* Skip link for keyboard navigation */
+.skipLink {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    z-index: 1000;
+    transition: top 0.2s ease;
+}
+
+.skipLink:focus {
+    top: 0;
+}
+
+/* Focus trap for modals */
+.focusTrap {
+    outline: none;
+}

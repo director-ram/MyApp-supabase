@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: company-management-api
+    env: docker
+    dockerfilePath: ./CompanyManagementSystem/Dockerfile
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ConnectionStrings__DefaultConnection
+        sync: false
+
+  - type: web
+    name: company-management-ui
+    env: node
+    buildCommand: cd simple-po-manager-ui && npm install && npm run build
+    startCommand: cd simple-po-manager-ui && npm start
+    envVars:
+      - key: REACT_APP_API_URL
+        fromService:
+          type: web
+          name: company-management-api
+          property: host
